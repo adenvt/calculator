@@ -1,6 +1,6 @@
-# Tic Tac Toe
+# Calculator
 
-Simple Tic Tac Toe game using Vue 3. Support single player (vs AI) or multiplayer.
+Simple Calculator App using Vue 3.
 
 ## Techstack
 
