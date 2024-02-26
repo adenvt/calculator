@@ -20,7 +20,6 @@
         </button>
         <button
           class="calculator__keypad-pad"
-          :class="{'active': lastKey === '/'}"
           @click="onOperatorPressed('/')">
           ÷
         </button>
@@ -42,7 +41,6 @@
         </button>
         <button
           class="calculator__keypad-pad"
-          :class="{'active': lastKey === '*'}"
           @click="onOperatorPressed('*')">
           ×
         </button>
@@ -64,7 +62,6 @@
         </button>
         <button
           class="calculator__keypad-pad"
-          :class="{'active': lastKey === '-'}"
           @click="onOperatorPressed('-')">
           −
         </button>
@@ -86,7 +83,6 @@
         </button>
         <button
           class="calculator__keypad-pad"
-          :class="{'active': lastKey === '+'}"
           @click="onOperatorPressed('+')">
           +
         </button>
@@ -236,7 +232,6 @@ function onKeyboard (event: KeyboardEvent) {
 
     case '.': {
       addDecimal()
-
       break
     }
 
@@ -279,7 +274,7 @@ onUnmounted(() => {
   }
 
   &__keypad {
-    @apply grid grid-cols-4 grid-rows-5 gap-2;
+    @apply grid grid-cols-4 grid-rows-5 gap-2 touch-manipulation;
 
     &-pad {
       @apply p-2 border-2 border-retro flex items-center justify-center text-xl rounded;
